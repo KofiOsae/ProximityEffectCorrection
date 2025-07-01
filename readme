@@ -1,21 +1,40 @@
-# PEC Isofocal Dose Analyzer
+- **Upload CSV or XLSX Data**: Requires `Dose`, `PatternDensity`, `Target CD`, `Centre` columns.
+- **Interactive Plotting**:
+  - 3D Polynomial Surface
+  - 2D Contour Plot
+  - Isofocal Dose Trends (with Linear, Quadratic, and Double-Gaussian Fits)
+  - CD Contour Maps from Double-Gaussian
+  - Double-Gaussian PSF Plot
+  - Mean & Std Dev of CD vs Target CD
 
-A Streamlit web app for analyzing and visualizing isofocal trends using polynomial and Double-Gaussian models.
+---
 
-## Features
+## 🔍 Process Optimization Tools
 
-- Upload CSV/XLSX data
-- Fit 2D polynomial and Double-Gaussian models
-- Visualize:
-  - 3D Surface
-  - 2D Contour
-  - Isofocal dose trends
-  - PSF distribution
-- Compute corrected dose based on model fit
+### ✅ Isofocal Fit Confidence Intervals
+For both linear and quadratic fits, the app overlays **±95% confidence bands**, allowing users to:
 
-## Requirements
+- Visually assess model uncertainty.
+- Evaluate robustness across pattern densities.
 
-Install dependencies:
+### ✅ Bias Estimation
+Bias is estimated at the dose predicted to achieve the target CD for both linear and quadratic fits, using the full 2D polynomial model.
 
+---
+
+## 📁 Input Format
+
+Supported formats: `.csv`, `.xlsx`  
+Required columns:
+- `Dose`
+- `PatternDensity`
+- `Target CD`
+- `Centre` (automatically renamed to `CD` internally)
+
+---
+
+## 🚀 Run the App
+
+1. **Install Requirements**
 ```bash
 pip install -r requirements.txt
