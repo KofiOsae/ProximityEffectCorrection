@@ -1,0 +1,21 @@
+# PEC Isofocal Dose Analyzer
+
+A Streamlit web app for analyzing and visualizing isofocal trends using polynomial and Double-Gaussian models.
+
+## Features
+
+- Upload CSV/XLSX data
+- Fit 2D polynomial and Double-Gaussian models
+- Visualize:
+  - 3D Surface
+  - 2D Contour
+  - Isofocal dose trends
+  - PSF distribution
+- Compute corrected dose based on model fit
+
+## Requirements
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
